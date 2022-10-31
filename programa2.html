@@ -1,0 +1,34 @@
+<canvas width = "600" height = "400"> </canvas>
+
+<script>
+	
+	function desenhaQuadrado(x, y, cor,)             //Criar função//
+	
+	{
+
+	var tela = document.querySelector ("canvas");  //Chama a função HTML que no caso é "canvas"//
+	var pincel = tela.getContext("2d"); 		   //Trasforma a variavél tela em um contexto a ser desenhado, que no caso é 2d//
+
+	pincel.fillStyle = cor;     	      		   //Escolhe a cor do pincel//
+	pincel.fillRect(x, y, 50, 50);				   //Desenha linha reta, quadrado, retangulo etc...//
+	pincel.fillStroke							   //Desenha borda com a coloração padrão que é preta//
+	pincel.strokeStyle = "black"				   //Escolhe a cor da borda
+	pincel.strokeRect(x, y, 50, 50);}  			   //Desenha a borda em linha reta, quadrada ou retangulo e etc...//			  
+
+	/*var x = 0;
+
+	while(x < 600) {							   //Estrutura de repetição//
+
+	desenhaQuadrado(x, 0, "green");				   //Invocar função //	
+	x = x + 50;
+
+	}*/
+
+	for(var x = 0; x < 600; x = x + 50) {		   //Estrutura de repetição for//
+		
+		desenhaQuadrado(x, 0, "green");
+	}
+
+
+
+</script>
